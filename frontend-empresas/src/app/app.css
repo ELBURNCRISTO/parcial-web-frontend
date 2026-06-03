@@ -1,0 +1,10 @@
+.container { max-width: 900px; margin: 40px auto; font-family: system-ui, sans-serif; }
+h1 { text-align: center; }
+.card { border: 1px solid #ddd; border-radius: 8px; padding: 16px; margin-bottom: 20px; }
+.form { display: flex; gap: 8px; flex-wrap: wrap; }
+.form input { padding: 8px; border: 1px solid #ccc; border-radius: 4px; flex: 1; min-width: 140px; }
+.form button { padding: 8px 16px; border: none; background: #2563eb; color: white; border-radius: 4px; cursor: pointer; }
+.form button:hover { background: #1d4ed8; }
+table { width: 100%; border-collapse: collapse; margin-top: 8px; }
+th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+th { background: #f3f4f6; }

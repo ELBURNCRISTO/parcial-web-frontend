@@ -1,0 +1,41 @@
+<div class="container">
+  <h1>Gestión de Empresas</h1>
+
+  <section class="card">
+    <h2>Registrar empresa</h2>
+    <div class="form">
+      <input [(ngModel)]="nueva.nombre" placeholder="Nombre" />
+      <input [(ngModel)]="nueva.nit" placeholder="NIT" />
+      <input [(ngModel)]="nueva.ciudad" placeholder="Ciudad" />
+      <input [(ngModel)]="nueva.sector" placeholder="Sector" />
+      <button (click)="guardarEmpresa()">Guardar</button>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Empresas registradas</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>NIT</th>
+          <th>Ciudad</th>
+          <th>Sector</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let e of empresas">
+          <td>{{ e.id }}</td>
+          <td>{{ e.nombre }}</td>
+          <td>{{ e.nit }}</td>
+          <td>{{ e.ciudad }}</td>
+          <td>{{ e.sector }}</td>
+        </tr>
+        <tr *ngIf="empresas.length === 0">
+          <td colspan="5">No hay empresas registradas</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</div>
